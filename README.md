@@ -59,6 +59,65 @@ Schematic of our project:
 
 ## Software description
 
+### Functions to extract data from GPRMC message 
+
+Function to extract time from the GPRMC sentence and format it as "XX:XX:XX"
+```
+void extractAndFormatTime(char *data, char *formattedTime) {
+    // Define array size of time string + Null-terminate
+    char time[7];
+    7// Extract the time part from the input data starting from the 7th character taking 6 characters
+    strncpy(time, data + 7, 6);
+    // Null-terminate the extracted time string to make it a valid C string
+    time[6] = '\0';
+    // Format the time and store it in the formattedTime string
+    sprintf(formattedTime, "%c%c:%c%c:%c%c", time[0], time[1], time[2], time[3], time[4], time[5]);
+}
+```
+
+Function to extract date from the GPRMC sentence and format it as "XX.XX.XX"
+```
+void extractAndFormatDate(char *data, char *formattedDate) {
+    // Declare an array size of date string + Null-terminate
+    char date[7];
+    // Extract the date part from the input data starting from the 58th character taking 6 characters
+    strncpy(date, data + 58, 6);
+    // Null-terminate the extracted date string to make it a valid C string
+    date[6] = '\0';
+    // Format the date and store it in the formattedDate string
+    sprintf(formattedDate, "%c%c.%c%c.%c%c", date[0], date[1], date[2], date[3], date[4], date[5]);
+}
+```
+
+
+// Function to extract latitude from the GPRMC sentence
+```
+void extractLatitude(char *data, char *latitude) {
+    // Declare an array size of latitude string + Null-terminate
+    char latitude[10];
+    // Extract the date part from the input data starting from the 20th character taking 9 characters
+    strncpy(latitude, data + 20, 9);
+    // Null-terminate the string
+    latitude[9] = '\0';
+}
+```
+
+// Function to extract longitude from the GPRMC sentence
+```
+void extractLongitude(char *data, char *longitude) {
+    // Declare an array size of latitude string + Null-terminate
+    char date[11];
+    // Extract the date part from the input data starting from the 34th character taking 10 characters
+    strncpy(longitude, data + 33, 10);  // Start at position 33 taking 10 characters
+    // Null-terminate the string
+    longitude[10] = '\0';
+}
+```
+
+
+
+
+
 Put flowcharts of your algorithm(s) and direct links to source files in `src` or `lib` folders.
 
 ## Instructions
