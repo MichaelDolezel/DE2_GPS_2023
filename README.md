@@ -51,6 +51,8 @@ Checksum and sentence terminator.
 From all this data we decided that only Date, time, and position are useful.
 These coordinates that we measured from the window we measured in are roughly 223m from our correct location, which can be explained by measurement a short time after the sensor found the GPS signal. 
 
+![Measured GPS location](images/GPS_meas.png)
+
 Schematic of our project:
 
 ![Schematics](images/Project_bb.png)
