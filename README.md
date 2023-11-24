@@ -36,11 +36,11 @@ $GPRMC 093533.00 A 4913.58989 N 01634.42942 E 0.322 21.61 161123   A53\r\n
 GPS sensor sends them at a rate of one message per second on a baud rate of 9600
 Our problem was that working with this sensor turned out to be a bit complicated due to the low power of antenna causing us to receive GPS signal outside of the window or outside 
 
-![GPS measuring](images/gps_measuring.png)
+![GPS signal measurment](images/gps_measuring.png)
 
 So we created a simple solution to transmit our measured signal on one Arduino and process the data in the second Arduino 
 
-![Ardzuino as source of signal](images/gps_arduino.png)
+![Ardzuino as source of signal](images/Arduino_to_Arduino.png)
 
 The next task was to receive the data coming to uart and then select GPRMC part and store it as data.
 the GPRMC looks like this: **$GPRMC 093533.00 A 4913.58989 N 01634.42942 E 0.322 21.61 161123   A53\r\n**
@@ -53,7 +53,7 @@ These coordinates that we measured from window is roughly 223m from our correct 
 
 Schematic of our project:
 
-
+![Schematics](images/Project_bb.png)
 
 ## Software description
 
