@@ -30,8 +30,8 @@ Create a comprehensive data logging system using an AVR microcontroller. The sys
 
 - [x] Create a program capable of reading GPS data
 - [x] Format them and save them to a .txt file 
-- [x] Add Humidity and temperature data
-- [X] Display data in real time on oled display
+- [] Add Humidity and temperature data
+- [] Display data in real time on oled display
 
 
 <a name="Theoretical"></a>
