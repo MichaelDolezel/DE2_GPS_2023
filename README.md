@@ -136,7 +136,48 @@ char extractLongitudeDir(char *data) {
 }
 ```
 
-Check if the message starts with "$GPRMC" and extract and format the time, date, latitude, and longitude data
+```
+int main(void) {
+    uart_init();
+
+    while (1) {
+        // Receive data from the RX pin
+        char received_char = uart_receive();
+
+        // Save the received character into the buffer
+        received_data[received_index] = received_char;
+
+        // Increment the buffer index (with overflow protection)
+        received_index = (received_index + 1) % BUFFER_SIZE;
+
+        // Check for a newline character, indicating the end of a message
+        if (received_char == '\n') {
+            // Null-terminate the string
+            received_data[received_index] = '\0';
+
+            // Check if the message starts with "$GPRMC"
+            if (strncmp(received_data, gprmc_prefix, strlen(gprmc_prefix)) == 0) {
+            .
+            .
+            .
+            }
+
+            // Reset the buffer index for the next message
+            received_index = 0;
+        }
+    }
+
+    return 0;
+}
+```
+
+
+
+
+
+
+
+Check if the message starts with "$GPRMC" and extract and format the time, date, latitude, and longitude data and transmit them through UART
 ```
 char gprmc_prefix[] = "$GPRMC";
 
