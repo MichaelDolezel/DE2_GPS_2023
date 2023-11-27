@@ -253,6 +253,8 @@ char gprmc_prefix[] = "$GPRMC";
 
 
 
+## Library copyrights 
+All used libraries have free licence use for our case
 
 
 
@@ -271,5 +273,5 @@ Could you write an instruction manual for your application, including photos and
 <a name="references"></a>
 ## References
 
-1. Write your text here.
+1. [Atmel AVR Microcontroller ATmega328P for initializing of uart communication page 168-169] (https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)
 2. ...
