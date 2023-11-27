@@ -136,6 +136,8 @@ char extractLongitudeDir(char *data) {
 }
 ```
 
+
+
 ```
 int main(void) {
     uart_init();
