@@ -75,53 +75,118 @@ Function to extract time from the GPRMC sentence and format it as "XX:XX:XX"
 void extractAndFormatTime(char *data, char *formattedTime) {
     // Define array size of time string + Null-terminate
     char time[7];
-    7// Extract the time part from the input data starting from the 7th character taking 6 characters
+    // Extract the time part from the input data starting from the 7th character taking 6 characters
     strncpy(time, data + 7, 6);
     // Null-terminate the extracted time string to make it a valid C string
-    time[6] = '\0';
+    time[6] = '\0';  
     // Format the time and store it in the formattedTime string
     sprintf(formattedTime, "%c%c:%c%c:%c%c", time[0], time[1], time[2], time[3], time[4], time[5]);
+}
 }
 ```
 
 Function to extract date from the GPRMC sentence and format it as "XX.XX.XX"
 ```
 void extractAndFormatDate(char *data, char *formattedDate) {
-    // Declare an array size of date string + Null-terminate
+    // Define array size of time string + Null-terminate
     char date[7];
-    // Extract the date part from the input data starting from the 58th character taking 6 characters
+    // Extract the time part from the input data starting from the 58th character taking 6 characters
     strncpy(date, data + 58, 6);
-    // Null-terminate the extracted date string to make it a valid C string
+    // Null-terminate the extracted time string to make it a valid C string
     date[6] = '\0';
-    // Format the date and store it in the formattedDate string
+    // Format the time and store it in the formattedTime string
     sprintf(formattedDate, "%c%c.%c%c.%c%c", date[0], date[1], date[2], date[3], date[4], date[5]);
 }
 ```
 
 
-// Function to extract latitude from the GPRMC sentence
+Function to extract latitude from the GPRMC sentence
 ```
 void extractLatitude(char *data, char *latitude) {
-    // Declare an array size of latitude string + Null-terminate
-    char latitude[10];
-    // Extract the date part from the input data starting from the 20th character taking 9 characters
-    strncpy(latitude, data + 20, 9);
-    // Null-terminate the string
-    latitude[9] = '\0';
+    // Extract the time part from the input data starting from the 19th character taking 10 characters
+    strncpy(latitude, data + 19, 10);  
+    // Null-terminate the extracted time string to make it a valid C string
+    latitude[10] = '\0';  
 }
 ```
 
-// Function to extract longitude from the GPRMC sentence
+Function to extract latitude direction N/S from the GPRMC sentence
 ```
-void extractLongitude(char *data, char *longitude) {
-    // Declare an array size of latitude string + Null-terminate
-    char date[11];
-    // Extract the date part from the input data starting from the 34th character taking 10 characters
-    strncpy(longitude, data + 33, 10);  // Start at position 33 taking 10 characters
-    // Null-terminate the string
-    longitude[10] = '\0';
+char extractLatitudeDir(char *data) {
+    // Extract the latitude direction from the input data from the 30th character
+    return data[30];
 }
 ```
+
+Function to extract longitude from the GPRMC sentence
+```
+void extractLongitude(char *data, char *longitude) {
+    // Extract the time part from the input data starting from the 19th character taking 10 characters
+    strncpy(longitude, data + 32, 10);
+    // Null-terminate the extracted time string to make it a valid C string
+    longitude[11] = '\0';
+}
+```
+
+Function to extract longitude direction E/W from the GPRMC sentence
+```
+char extractLongitudeDir(char *data) {
+    // Extract the latitude direction from the input data from the 44th character
+    return data[44];
+}
+```
+
+Check if the message starts with "$GPRMC" and extract and format the time, date, latitude, and longitude data
+```
+char gprmc_prefix[] = "$GPRMC";
+
+            // Check if the message starts with "$GPRMC"
+            if (strncmp(received_data, gprmc_prefix, strlen(gprmc_prefix)) == 0) {
+                // Extract and format the time, date, latitude, and longitude data
+                char formattedTime[9];
+                char formattedDate[9];
+                char latitude[11];
+                char longitude[13];
+                char latitudeDir, longitudeDir;
+
+                extractAndFormatTime(received_data, formattedTime);
+                extractAndFormatDate(received_data, formattedDate);
+                extractLatitude(received_data, latitude);
+                extractLongitude(received_data, longitude);
+                latitudeDir = extractLatitudeDir(received_data);
+                longitudeDir = extractLongitudeDir(received_data);
+
+                // Transmit the formatted data
+                uart_transmit_string("Time:,");
+                uart_transmit_string(formattedTime);
+                uart_transmit_string(",");
+
+                uart_transmit_string("Date:,");
+                uart_transmit_string(formattedDate);
+                uart_transmit_string(",");
+
+                uart_transmit_string("Latitude:,");
+                uart_transmit_string(latitude);
+                uart_transmit_string(" ");
+                uart_transmit(latitudeDir);
+                uart_transmit_string(",");
+
+
+                uart_transmit_string("Longitude:,");
+                uart_transmit_string(longitude);
+                uart_transmit_string(" ");
+                uart_transmit(longitudeDir);
+                
+
+
+                uart_transmit_string("\r");
+                uart_transmit_string("\n");
+            }
+```
+
+
+
+
 
 
 
