@@ -1,9 +1,4 @@
-# C project
-
-## Topic
-
-**GPS-based environmental sensor data logger**
-Create a comprehensive data logging system using an AVR microcontroller. The system integrates GPS functionality for location tracking and an I2C environment sensor to capture data related to environmental conditions. The project aims to log and display sensor data and provide the capability to export the collected information for analysis.
+# C project 
 
 ## Team members
 
@@ -12,6 +7,34 @@ Create a comprehensive data logging system using an AVR microcontroller. The sys
 * Petr Vaněk (responsible for ...)
 * Dominik (responsible for ...)
 
+
+### Table of contents
+
+* [Topic](#Topic)
+* [Project objectives](#objectives)
+* [Theoretical description and explanation](#Theoretical)
+* [Software](#Software)
+* [Presentation](#Presentation)
+* [Conclusion](#Conclusion)
+* [References](#references)
+
+  
+<a name="Topic"></a>
+## Topic
+
+**GPS-based environmental sensor data logger**
+Create a comprehensive data logging system using an AVR microcontroller. The system integrates GPS functionality for location tracking and an I2C environment sensor to capture data related to environmental conditions. The project aims to log and display sensor data and provide the capability to export the collected information for analysis.
+
+<a name="objectives"></a>
+## Project objectives
+
+- [x] Create a program capable of reading GPS data
+- [x] Format them and save them to a .txt file 
+- [x] Add Humidity and temperature data
+- [X] Display data in real time on oled display
+
+
+<a name="Theoretical"></a>
 ## Theoretical description and explanation
 
 In our project use GPS module [*GPS NEO-6M GYNEO6MV2*](https://dratek.cz/arduino/1510-gps-neo-6m-gyneo6mv2-modul-s-antenou.html?ehub=e6081933ad2044229d14dafac815f8e3) and save data "[**GPRMC**](https://docs.novatel.com/OEM7/Content/Logs/GPRMC.htm)" then we merge them with data from Humidity/temperature **DHT12 digital sensor** and display them on **SH1106 I2C OLED display 128x64**. Data are also saved to a .txt file for future use and analysis.
@@ -62,7 +85,7 @@ Data are being formatted like: **Time:,12:36:50, Date:, 26.11.23, Latitude:,4913
 ![Data at notepad](images/notepad.png)
 ![Data in excel](images/excel.png)
 
-
+<a name="Software"></a>
 ## Software description
 
 
@@ -233,14 +256,19 @@ char gprmc_prefix[] = "$GPRMC";
 
 
 
+<a name="Presentation"></a>
+## Presentation
+
 
 
 Put flowcharts of your algorithm(s) and direct links to source files in `src` or `lib` folders.
 
-## Instructions
+<a name="Conclusion"></a>
+## Conclusion
 
 Could you write an instruction manual for your application, including photos and a link to a short app video?
 
+<a name="references"></a>
 ## References
 
 1. Write your text here.
