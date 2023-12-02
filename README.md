@@ -17,16 +17,9 @@
 * [Data saving to PC](#Data_saving_to_PC)
 * [Software](#Software)
 * [Presentation](#Presentation)
+* [Flowcharts](#Flowcharts)
 * [Conclusion](#Conclusion)
 * [References](#references)
-
-<a name="Presentation"></a>
-## Library copyrights 
-All used libraries have free licence use for our case
-
-
-<a name="Data saving to PC"></a>
-## Data saving to PC
 
 
 **GPS-based environmental sensor data logger**
@@ -274,6 +267,9 @@ _Underneath is a video with a manual for saving data with CoolTerm_
 ![Data at notepad](images/notepad.png) 
 ![Data in excel](images/excel.png)
 
+
+<a name="Flowcharts"></a>
+## Flowcharts
 
 Put flowcharts of your algorithm(s) and direct links to source files in `src` or `lib` folders.
 
