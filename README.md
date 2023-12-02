@@ -87,11 +87,6 @@ Schematic of our project:
 
 ![Schematics](images/Project_bb.png)
 
-Data are being formatted like: **Time:,12:36:50, Date:, 26.11.23, Latitude:,4913.58989 N, Longitude:, 01634.42942 E** "," are for saving data to excel for further analysis. We usivg program called **CoolTerm** to save uart data from GPS sensor to .txt file.
-
-![Data at notepad](images/notepad.png)
-![Data in excel](images/excel.png)
-
 <a name="Software"></a>
 ## Software description
 
@@ -270,6 +265,10 @@ All used libraries have free licence use for our case
 <a name="Data_saving_to_PC"></a>
 ## Data saving to PC
 
+Data are being formatted like: **Time:,12:36:50, Date:, 26.11.23, Latitude:,4913.58989 N, Longitude:, 01634.42942 E** "," are for saving data to excel for further analysis. We usivg program called **CoolTerm** to save uart data from GPS sensor to .txt file.
+
+![Data at notepad](images/notepad.png)
+![Data in excel](images/excel.png)
 
 
 Put flowcharts of your algorithm(s) and direct links to source files in `src` or `lib` folders.
