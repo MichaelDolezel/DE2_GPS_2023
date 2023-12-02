@@ -2,10 +2,10 @@
 
 ## Team members
 
-* Michael Doležel (responsible for ...)
-* Samuel Vandovič (responsible for ...)
-* Petr Vaněk (responsible for ...)
-* Dominik (responsible for ...)
+* Michael Doležel (responsible for GPS sensor data processing, saving data to PC and github)
+* Samuel Vandovič (responsible for support)
+* Petr Vaněk (responsible for DH12 and OLED display communication)
+* Dominik (responsible for presentation)
 
 
 ### Table of contents
@@ -109,15 +109,18 @@ void extractAndFormatTime(char *data, char *formattedTime) {
 ```
 
 Function to extract date from the GPRMC sentence and format it as "XX.XX.XX"
+_This function was bit more problematic because our GPS GPRMC sentence is variable at length due to speed and angle data. This property was not problem for rest of data because they are before Speed and angle_
 ```
 void extractAndFormatDate(char *data, char *formattedDate) {
-    // Define array size of time string + Null-terminate
+    // Define array size of date string + Null-terminate
     char date[7];
-    // Extract the time part from the input data starting from the 58th character taking 6 characters
-    strncpy(date, data + 58, 6);
-    // Null-terminate the extracted time string to make it a valid C string
+    // Calculate the starting index for the date by subtracting 12 characters from the end of the string
+    int startIndex = strlen(data) - 12;  // Adjusted for the date length
+    // Extract the date part from the input data starting from the calculated index taking 6 characters
+    strncpy(date, data + startIndex, 6);
+    // Null-terminate the extracted date string to make it a valid C string
     date[6] = '\0';
-    // Format the time and store it in the formattedTime string
+    // Format the date and store it in the formattedDate string
     sprintf(formattedDate, "%c%c.%c%c.%c%c", date[0], date[1], date[2], date[3], date[4], date[5]);
 }
 ```
