@@ -282,4 +282,4 @@ Could you write an instruction manual for your application, including photos and
 ## References
 
 1. [Atmel AVR Microcontroller ATmega328P for initializing of uart communication page 168-169] (https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)
-2. ...
+2. [CoolTerm Download site](https://freeware.the-meiers.org/)
