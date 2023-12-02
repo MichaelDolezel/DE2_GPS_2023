@@ -259,15 +259,16 @@ char gprmc_prefix[] = "$GPRMC";
 
 <a name="Library_copyrights"></a>
 ## Library copyrights 
-All used libraries have free licence use for our case
+All used libraries have free license use for our case
 
 
 <a name="Data_saving_to_PC"></a>
 ## Data saving to PC
 
-Data are being formatted like: **Time:,12:36:50, Date:, 26.11.23, Latitude:,4913.58989 N, Longitude:, 01634.42942 E** "," are for saving data to excel for further analysis. We usivg program called **CoolTerm** to save uart data from GPS sensor to .txt file.
+Data are being formatted like this: **Time:,12:36:50, Date:, 26.11.23, Latitude:,4913.58989 N, Longitude:, 01634.42942 E** "," are for saving data to Excel for further analysis. We use a program called **CoolTerm** to save UART data from the GPS sensor to a .txt file.
 
-[![Watch the video](https://img.youtube.com/vi/RWgyCcnUxPY/hqdefault.jpg)](https://www.youtube.com/embed/RWgyCcnUxPY)
+_Underneath is a video with a manual for saving data with CoolTerm_
+[![CoolTerm](https://img.youtube.com/vi/RWgyCcnUxPY/hqdefault.jpg)](https://www.youtube.com/embed/RWgyCcnUxPY)
 
 ![Data at notepad](images/notepad.png) 
 ![Data in excel](images/excel.png)
