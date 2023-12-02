@@ -283,3 +283,4 @@ Could you write an instruction manual for your application, including photos and
 
 1. [Atmel AVR Microcontroller ATmega328P for initializing of uart communication page 168-169](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)
 2. [CoolTerm Download site](https://freeware.the-meiers.org/)
+3. [GPS module datasheet](https://www.waveshare.com/w/upload/a/a9/U-blox-6-Receiver-Description-Including-Protocol-Specification.pdf)
