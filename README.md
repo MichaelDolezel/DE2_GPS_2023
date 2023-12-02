@@ -267,9 +267,8 @@ All used libraries have free licence use for our case
 
 Data are being formatted like: **Time:,12:36:50, Date:, 26.11.23, Latitude:,4913.58989 N, Longitude:, 01634.42942 E** "," are for saving data to excel for further analysis. We usivg program called **CoolTerm** to save uart data from GPS sensor to .txt file.
 
-[![](https://img.youtube.com/vi/APOPm01BVrk/hqdefault.jpg)](https://www.youtube.com/watch?v=RWgyCcnUxPY)
-[<img src="https://img.youtube.com/vi/APOPm01BVrk/hqdefault.jpg" width="600" height="300"/>](https://www.youtube.com/watch?v=RWgyCcnUxPY)
-![Data at notepad](images/notepad.png)
+[![](https://img.youtube.com/vi/<https://www.youtube.com/watch?v=RWgyCcnUxPY>/hqdefault.jpg)](https://www.youtube.com/watch?v=RWgyCcnUxPY)  
+![Data at notepad](images/notepad.png) 
 ![Data in excel](images/excel.png)
 
 
