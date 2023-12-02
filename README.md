@@ -13,14 +13,21 @@
 * [Topic](#Topic)
 * [Project objectives](#objectives)
 * [Theoretical description and explanation](#Theoretical)
+* [Library copyrights](#Library_copyrights)
+* [Data saving to PC](#Data_saving_to_PC)
 * [Software](#Software)
 * [Presentation](#Presentation)
 * [Conclusion](#Conclusion)
 * [References](#references)
 
-  
-<a name="Topic"></a>
-## Topic
+<a name="Presentation"></a>
+## Library copyrights 
+All used libraries have free licence use for our case
+
+
+<a name="Data saving to PC"></a>
+## Data saving to PC
+
 
 **GPS-based environmental sensor data logger**
 Create a comprehensive data logging system using an AVR microcontroller. The system integrates GPS functionality for location tracking and an I2C environment sensor to capture data related to environmental conditions. The project aims to log and display sensor data and provide the capability to export the collected information for analysis.
@@ -255,14 +262,13 @@ char gprmc_prefix[] = "$GPRMC";
 
 
 
-
+<a name="Library_copyrights"></a>
 ## Library copyrights 
 All used libraries have free licence use for our case
 
 
-
-<a name="Presentation"></a>
-## Presentation
+<a name="Data_saving_to_PC"></a>
+## Data saving to PC
 
 
 
