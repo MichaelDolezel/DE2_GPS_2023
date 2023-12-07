@@ -65,16 +65,35 @@ So we created a simple solution to transmit our measured signal on one Arduino a
 
 ![Ardzuino as source of signal](images/Arduino_to_Arduino.png)
 
-The next task was to receive the data coming to UART and then select the GPRMC part and store it as data.
+The next task was to receive the data coming to UART, select the GPRMC part, and store it as data.
 the GPRMC looks like this: **$GPRMC 093533.00 A 4913.58989 N 01634.42942 E 0.322 21.61 161123   A53\r\n**
 The first field is UTC of position in hhmmss.ss format so in this case we measured at 09:35:33 UTC. Next is position status with only two values (A = data valid, V = data invalid). after that is latitude in format 
-(DDmm.mm) followed by latitude direction (N = North, S = South) as can be expected, the next two fields are longitude (DDDmm.mm) and longitude direction (E = East, W = West). The following fields are Speed over ground in knots than Track made good - degrees True (which means the traveling direction that is independent of the direction in which the device is pointing), then the date (dd/mm/yy), last is 	
-Checksum and sentence terminator.
+(DDmm.mm) followed by latitude direction (N = North, S = South) as can be expected, the next two fields are longitude (DDDmm.mm) and longitude direction (E = East, W = West). The following fields are Speed over ground in knots than Track made good - degrees True (which means the traveling direction that is independent of the direction in which the device is pointing), then the date (dd/mm/yy), last is Checksum and sentence terminator.
 
 From all this data we decided that only Date, time, and position are useful.
-These coordinates that we measured from the window we measured in are roughly 223m from our correct location, which can be explained by measurement a short time after the sensor found the GPS signal. 
+These coordinates from the window we measured in are roughly 223m from our correct location, which can be explained by measurement a short time after the sensor found the GPS signal. 
 
 ![Measured GPS location](images/GPS_meas.png)
+
+Longitude and latitude are in Decimal degrees (DD) format (Latitude4913.58989 N, Longitude: 01634.42942 E) first we need to move decimal point like this (Latitude:49.1361781 N, Longitude: 016.3448005 E)
+To translate this format to degrees, minutes, seconds (DMS) format we need few operations.
+
+**Latitude:**
+
+- Degrees: 49 degrees
+- Minutes: 13.58989 minutes
+- Seconds: (0.58989 * 60) = 35.3934 seconds
+
+So, the DMS format for the latitude is approximately 49° 13' 35.3934'' N.
+
+**Longitude:**
+
+- Degrees: 16 degrees
+- Minutes: 34.42942 minutes
+- Seconds: (0.42942 * 60) = 25.7652 seconds
+
+So, the DMS format for the longitude is approximately 16° 34' 25.7652'' E.
+
 
 Schematic of our project:
 
