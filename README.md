@@ -295,8 +295,8 @@ After that data can be processed
 <a name="Flowcharts"></a>
 ## Flowcharts
 
-Link for video with functional project
-[!](https://clipchamp.com/watch/YomWXp0xUMD)
+Link for video with
+[functional project](https://clipchamp.com/watch/YomWXp0xUMD)
 
 
 <a name="Conclusion"></a>
