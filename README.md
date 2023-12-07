@@ -264,8 +264,8 @@ _Underneath is a video with a manual for saving data with CoolTerm_
 
 [![CoolTerm](https://img.youtube.com/vi/RWgyCcnUxPY/hqdefault.jpg)](https://www.youtube.com/embed/RWgyCcnUxPY)
 
-![Data at notepad](images/notepad.png) 
-![Data in excel](images/excel.png)
+![Data at notepad](images/notepad2.png) 
+![Data in excel](images/excel2.png)
 
 
 <a name="Flowcharts"></a>
