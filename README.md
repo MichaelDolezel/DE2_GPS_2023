@@ -59,7 +59,7 @@ $GPRMC 093533.00 A 4913.58989 N 01634.42942 E 0.322 21.61 161123   A53\r\n
 GPS sensor sends them at a rate of one message per second on a baud rate of 9600
 Our problem was that working with this sensor turned out to be a bit complicated due to the low power of the antenna causing us to receive GPS signal outside of the window or outside 
 
-![GPS signal measurment](images/gps_measuring2.png)
+![GPS signal measurment](images/GPS_meas2.png)
 
 So we created a simple solution to transmit our measured signal on one Arduino and process the data in the second Arduino 
 
