@@ -15,6 +15,7 @@
 * [Theoretical description and explanation](#Theoretical)
 * [Library copyrights](#Library_copyrights)
 * [Data saving to PC](#Data_saving_to_PC)
+* [Schematic](#Schematic)
 * [Software](#Software)
 * [Presentation](#Presentation)
 * [Flowcharts](#Flowcharts)
@@ -94,16 +95,15 @@ So, the DMS format for the latitude is approximately 49° 13' 35.3934'' N.
 
 So, the DMS format for the longitude is approximately 16° 34' 25.7652'' E.
 
-
-Schematic of our project:
+<a name="Schematic"></a>
+##Schematic of our project:
 
 ![Schematics](images/Project_bb.png)
 
+
+
 <a name="Software"></a>
 ## Software description
-
-
-
 
 ### Functions to extract data from GPRMC message 
 
