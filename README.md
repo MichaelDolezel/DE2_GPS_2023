@@ -5,7 +5,7 @@
 * Michael Doležel (responsible for GPS sensor data processing, saving data to PC and github)
 * Samuel Vandovič (responsible for support)
 * Petr Vaněk (responsible for DH12 and OLED display communication)
-* Dominik (responsible for presentation)
+* Dominik Gedeon (responsible for presentation)
 
 
 ### Table of contents
