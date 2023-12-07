@@ -264,9 +264,12 @@ _Underneath is a video with a manual for saving data with CoolTerm_
 
 [![CoolTerm](https://img.youtube.com/vi/RWgyCcnUxPY/hqdefault.jpg)](https://www.youtube.com/embed/RWgyCcnUxPY)
 
-![Data at notepad](images/notepad2.png) 
+![Data at notepad](images/notepad.png) 
+![Data in excel](images/excel.png)
+After adding temperature and humidity
 ![Data in excel](images/excel2.png)
-
+Then data can be processed
+![Data in excel](images/Graph.png)
 
 <a name="Flowcharts"></a>
 ## Flowcharts
