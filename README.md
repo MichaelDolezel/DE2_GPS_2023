@@ -96,7 +96,7 @@ So, the DMS format for the latitude is approximately 49° 13' 35.3934'' N.
 So, the DMS format for the longitude is approximately 16° 34' 25.7652'' E.
 
 <a name="Schematic"></a>
-##Schematic of our project:
+## Schematic of our project:
 
 ![Schematics](images/Project_bb.png)
 
