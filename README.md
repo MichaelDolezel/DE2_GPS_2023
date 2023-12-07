@@ -127,7 +127,7 @@ void extractAndFormatDate(char *data, char *formattedDate) {
     // Define array size of date string + Null-terminate
     char date[7];
     // Calculate the starting index for the date by subtracting 12 characters from the end of the string
-    int startIndex = strlen(data) - 12;  // Adjusted for the date length
+    int startIndex = strlen(data) - 15;  // Adjusted for the date length
     // Extract the date part from the input data starting from the calculated index taking 6 characters
     strncpy(date, data + startIndex, 6);
     // Null-terminate the extracted date string to make it a valid C string
