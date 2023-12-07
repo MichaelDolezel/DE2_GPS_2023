@@ -59,8 +59,6 @@ $GPRMC 093533.00 A 4913.58989 N 01634.42942 E 0.322 21.61 161123   A53\r\n
 GPS sensor sends them at a rate of one message per second on a baud rate of 9600
 Our problem was that working with this sensor turned out to be a bit complicated due to the low power of the antenna causing us to receive GPS signal outside of the window or outside 
 
-![GPS signal measurment](images/GPS_meas2.png)
-
 So we created a simple solution to transmit our measured signal on one Arduino and process the data in the second Arduino 
 
 ![Ardzuino as source of signal](images/Arduino_to_Arduino.png)
@@ -70,8 +68,10 @@ the GPRMC looks like this: **$GPRMC 093533.00 A 4913.58989 N 01634.42942 E 0.322
 The first field is UTC of position in hhmmss.ss format so in this case we measured at 09:35:33 UTC. Next is position status with only two values (A = data valid, V = data invalid). after that is latitude in format 
 (DDmm.mm) followed by latitude direction (N = North, S = South) as can be expected, the next two fields are longitude (DDDmm.mm) and longitude direction (E = East, W = West). The following fields are Speed over ground in knots than Track made good - degrees True (which means the traveling direction that is independent of the direction in which the device is pointing), then the date (dd/mm/yy), last is Checksum and sentence terminator.
 
+![GPS signal measurment](images/GPS_meas2.png)
+
 From all this data we decided that only Date, time, and position are useful.
-These coordinates from the window we measured in are roughly 223m from our correct location, which can be explained by measurement a short time after the sensor found the GPS signal. 
+These coordinates from the window we measured in are roughly 50m from our correct location, which can be explained by measurement a short time after the sensor found the GPS signal. 
 
 ![Measured GPS location](images/GPS_meas.png)
 
