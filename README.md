@@ -295,7 +295,9 @@ After that data can be processed
 <a name="Flowcharts"></a>
 ## Flowcharts
 
-Put flowcharts of your algorithm(s) and direct links to source files in `src` or `lib` folders.
+Link for video with functional project
+[!](https://clipchamp.com/watch/YomWXp0xUMD)
+
 
 <a name="Conclusion"></a>
 ## Conclusion
