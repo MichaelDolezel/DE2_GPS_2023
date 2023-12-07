@@ -74,7 +74,7 @@ The first field is UTC of position in hhmmss.ss format so in this case we measur
 From all this data we decided that only Date, time, and position are useful.
 These coordinates from the window we measured in are roughly 50m from our correct location, which can be explained by measurement a short time after the sensor found the GPS signal. 
 
-Longitude and latitude are in Decimal degrees (DD) format (Latitude4913.58989 N, Longitude: 01634.42942 E) first we need to move decimal point like this (Latitude:49.1361781 N, Longitude: 016.3448005 E)
+Longitude and latitude are in Decimal degrees (DD) format (Latitude4913.58989 N, Longitude: 01634.42942 E) first we need to move decimal point like this (Latitude:49.1361989 N, Longitude: 016.3442942 E)
 To translate this format to degrees, minutes, seconds (DMS) format we need few operations.
 
 **Latitude:**
