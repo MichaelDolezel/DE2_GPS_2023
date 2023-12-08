@@ -1,3 +1,101 @@
+/*
+    Flowchart of our project:
+    +-------------------+
+    | Start             |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Initialize UART   |
+    | and OLED          |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Initialize Timer  |
+    | and TWI           |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Set up OLED       |
+    | display           |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    |  Main Loop        |
+    |-------------------|
+    | Receive data from |
+    | UART (GPS)        |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    |Store data in bufer|
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Check for newline |
+    | character($)      |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Get line that     |
+    | starts with"GPRMC"|
+    |-------------------|
+    | (Ends with\r\n)   |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Process GPRMC data|
+    |-------------------|
+    | Extract time, date|
+    | latitude, and     |
+    | longitude         |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Transmit data to  |
+    | UART and OLED     |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Check for new data|
+    | from temperature  |
+    | sensor            |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Read sensor data  |
+    | from TWI          |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Display on OLED   |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Timer Interrupt   |
+    |-------------------|
+    | Read sensor data  |
+    | every 5 seconds   |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | End               |
+    +-------------------+
+*/
+
 #include <stdlib.h>
 #include <avr/io.h>
 #include <util/delay.h>
@@ -296,100 +394,3 @@ ISR(TIMER1_OVF_vect)
         twi_stop();
     }
 }
-/*
-    Flowchart of our project:
-    +-------------------+
-    | Start             |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | Initialize UART   |
-    | and OLED          |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | Initialize Timer  |
-    | and TWI           |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | Set up OLED       |
-    | display           |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    |  Main Loop        |
-    |-------------------|
-    | Receive data from |
-    | UART (GPS)        |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    |Store data in bufer|
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | Check for newline |
-    | character($)      |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | Get line that     |
-    | starts with"GPRMC"|
-    |-------------------|
-    | (Ends with\r\n)   |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | Process GPRMC data|
-    |-------------------|
-    | Extract time, date|
-    | latitude, and     |
-    | longitude         |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | Transmit data to  |
-    | UART and OLED     |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | Check for new data|
-    | from temperature  |
-    | sensor            |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | Read sensor data  |
-    | from TWI          |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | Display on OLED   |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | Timer Interrupt   |
-    |-------------------|
-    | Read sensor data  |
-    | every 5 seconds   |
-    +-------------------+
-        |
-        v
-    +-------------------+
-    | End               |
-    +-------------------+
-*/
