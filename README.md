@@ -376,6 +376,7 @@ After that data can be processed
     | Display on OLED   |
     +-------------------+
 
+
     +-------------------+
     | Timer Interrupt   |
     |-------------------|
