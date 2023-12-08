@@ -89,11 +89,6 @@
     | Read sensor data  |
     | every 5 seconds   |
     +-------------------+
-        |
-        v
-    +-------------------+
-    | End               |
-    +-------------------+
 */
 
 #include <stdlib.h>
