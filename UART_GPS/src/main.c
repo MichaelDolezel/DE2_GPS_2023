@@ -81,12 +81,13 @@
     +-------------------+
     | Display on OLED   |
     +-------------------+
-        |
-        v
+
+
     +-------------------+
     | Timer Interrupt   |
     |-------------------|
-    | Read sensor data  |
+    | Read temp sensor  |
+    | data              |
     | every 5 seconds   |
     +-------------------+
 */
