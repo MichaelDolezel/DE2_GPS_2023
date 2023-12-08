@@ -294,15 +294,103 @@ After that data can be processed
 
 <a name="Flowcharts"></a>
 ## Flowcharts
-
-Link for video with
-[functional project](https://clipchamp.com/watch/YomWXp0xUMD)
-
+    +-------------------+
+    | Start             |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Initialize UART   |
+    | and OLED          |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Initialize Timer  |
+    | and TWI           |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Set up OLED       |
+    | display           |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    |  Main Loop        |
+    |-------------------|
+    | Receive data from |
+    | UART (GPS)        |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    |Store data in bufer|
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Check for newline |
+    | character($)      |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Get line that     |
+    | starts with"GPRMC"|
+    |-------------------|
+    | (Ends with\r\n)   |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Process GPRMC data|
+    |-------------------|
+    | Extract time, date|
+    | latitude, and     |
+    | longitude         |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Transmit data to  |
+    | UART and OLED     |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Check for new data|
+    | from temperature  |
+    | sensor            |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Read sensor data  |
+    | from TWI          |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Display on OLED   |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Timer Interrupt   |
+    |-------------------|
+    | Read sensor data  |
+    | every 5 seconds   |
+    +-------------------+
 
 <a name="Conclusion"></a>
 ## Conclusion
 
 Could you write an instruction manual for your application, including photos and a link to a short app video?
+Link for video with
+[functional project](https://clipchamp.com/watch/YomWXp0xUMD)
+
 
 <a name="references"></a>
 ## References
