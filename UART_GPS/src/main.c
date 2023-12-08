@@ -273,7 +273,7 @@ ISR(TIMER1_OVF_vect)
     static uint8_t n_ovfs = 0;
 
     n_ovfs++;
-    // Read the data every 5 secs
+    // Read the data every 5 secs (can be changed to shorter period)
     if (n_ovfs >= 5) {
         n_ovfs = 0;
 
@@ -296,3 +296,100 @@ ISR(TIMER1_OVF_vect)
         twi_stop();
     }
 }
+/*
+    Flowchart of our project:
+    +-------------------+
+    | Start             |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Initialize UART   |
+    | and OLED          |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Initialize Timer  |
+    | and TWI           |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Set up OLED       |
+    | display           |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    |  Main Loop        |
+    |-------------------|
+    | Receive data from |
+    | UART (GPS)        |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    |Store data in bufer|
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Check for newline |
+    | character($)      |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Get line that     |
+    | starts with"GPRMC"|
+    |-------------------|
+    | (Ends with\r\n)   |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Process GPRMC data|
+    |-------------------|
+    | Extract time, date|
+    | latitude, and     |
+    | longitude         |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Transmit data to  |
+    | UART and OLED     |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Check for new data|
+    | from temperature  |
+    | sensor            |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Read sensor data  |
+    | from TWI          |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Display on OLED   |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | Timer Interrupt   |
+    |-------------------|
+    | Read sensor data  |
+    | every 5 seconds   |
+    +-------------------+
+        |
+        v
+    +-------------------+
+    | End               |
+    +-------------------+
+*/
