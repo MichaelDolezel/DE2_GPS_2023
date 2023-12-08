@@ -77,7 +77,7 @@ These coordinates from the window we measured in are roughly 50m from our correc
 Longitude and latitude are in Decimal degrees (DD) format (Latitude4913.58989 N, Longitude: 01634.42942 E) first we need to move decimal point like this (Latitude:49.1361989 N, Longitude: 016.3442942 E)
 To translate this format to degrees, minutes, seconds (DMS) format we need few operations.
 
-**Latitude:**
+**Latitude: 49.1361989 N**
 
 - Degrees: 49 degrees
 - Minutes: 13.58989 minutes
@@ -85,7 +85,7 @@ To translate this format to degrees, minutes, seconds (DMS) format we need few o
 
 So, the DMS format for the latitude is approximately 49° 13' 35.3934'' N.
 
-**Longitude:**
+**Longitude:016.3442942 E)**
 
 - Degrees: 16 degrees
 - Minutes: 34.42942 minutes
