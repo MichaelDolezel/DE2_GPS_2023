@@ -3,7 +3,7 @@
 ## Team members
 
 * Michael Doležel (responsible for GPS sensor data processing, saving data to PC and github)
-* Samuel Vandovič (responsible for support, debugging and uart)
+* Samuel Vandovič (responsible for debugging, uart and program diagram)
 * Petr Vaněk (responsible for DH12 and OLED display communication)
 * Dominik Gedeon (responsible for presentation)
 
