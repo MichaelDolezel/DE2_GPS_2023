@@ -388,9 +388,10 @@ After that data can be processed
 <a name="Conclusion"></a>
 ## Conclusion
 
-Could you write an instruction manual for your application, including photos and a link to a short app video?
-Link for video with
+Our project was smooth. The main issue was to save data from UART. But in the end, we created functional code. Data are saved with coolterm program and can be used to be exported to excel.
+
 [functional project](https://clipchamp.com/watch/YomWXp0xUMD)
+[Presentation](https://docs.google.com/presentation/d/19mg5YWHkvy8gl7RETonb9SvGQu8la4K4fYGNCFHPtMk/edit#slide=id.g2a084e7f3d2_0_171)
 
 
 <a name="references"></a>
